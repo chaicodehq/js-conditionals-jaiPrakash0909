@@ -34,22 +34,22 @@ export function calculateTax(income) {
     return tax;
   }
 
-  if(income>10000 && income<=30000){
+  else if(income>10000 && income<=30000){
     tax = (income - 10000)/10;
     return tax;
   }
 
-  if(income>30000 && income<=70000){
+  else if(income>30000 && income<=70000){
     tax = 2000+(income-30000)/5;
     return tax;
   }
 
-  if(income>70000){
+  else if(income>70000){
     tax = 10000+(income - 70000)*(3/10);
     return tax;
   }
 
-  if(income<=0){
+  else{
     return 0;
   }
 }
